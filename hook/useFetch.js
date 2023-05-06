@@ -4,7 +4,7 @@ import axios from "axios";
 
 // const rapidApiKey = RAPID_API_KEY;
 
-const UseFetch = (endpoint, query) => {
+const useFetch = (endpoint, query) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(null);
   const [error, setError] = useState(null);
@@ -13,7 +13,7 @@ const UseFetch = (endpoint, query) => {
     method: "GET",
     url: `https://jsearch.p.rapidapi.com/${endpoint}`,
     headers: {
-      "X-RapidAPI-Key": "44cfa8122fmsh3cf491e41872d08p193f31jsn228afc96eefc",
+      "X-RapidAPI-Key": "",
       "X-RapidAPI-Host": "jsearch.p.rapidapi.com",
     },
     params: { ...query },
@@ -45,4 +45,4 @@ const UseFetch = (endpoint, query) => {
   return { data, isLoading, error, reFetch };
 };
 
-export default UseFetch;
+export default useFetch;
